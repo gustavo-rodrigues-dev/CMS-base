@@ -6,7 +6,7 @@ Para desenvolver o cms, usei alguns sistemas sistema de automação de tarefas, 
 Para simplificar o Workflow, usei o [Yeoman](http://yeoman.io/), que já possui diversas tarefas já definidas.
 
 
-##CMS - Depenicas
+##CMS - Depndencias
     "bootstrap-sass-official": "~3.2.0",
     "modernizr": "~2.8.2",
     "mustache.js": "~2.0.0",
