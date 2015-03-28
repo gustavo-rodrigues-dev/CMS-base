@@ -71,8 +71,35 @@
     <article class="container">
       <div class="page-header">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="panel panel-danger panel-home">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart"></i>&nbsp; Estátistica de acesso por categoria</h3>
+              </div>
+              <div class="panel-body">
+                <div class="chart-access-month">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
             <div class="panel panel-success panel-home">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-book"></i>&nbsp; Paginas <span class="badge">14</span></h3>
+              </div>
+              <div class="panel-body">
+                <div class="list-group list-home">
+                  <a href="#" class="list-group-item"><i class="fa fa-plus-circle"></i> Adicionar
+                  </a>
+                  <a href="#" class="list-group-item"><i class="fa fa-list"></i>  Listar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="panel panel-warning panel-home">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-list-alt"></i>&nbsp; Categorias <span class="badge text-right">14</span></h3>
               </div>
@@ -86,21 +113,20 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-12 col-sm-4 col-md-4">
               <div class="panel panel-info panel-home">
                 <div class="panel-heading">
-                  <h3 class="panel-title"><i class="fa fa-book"></i>&nbsp; Paginas <span class="badge">14</span></h3>
+                  <h3 class="panel-title"><i class="fa fa-comment"></i>&nbsp; Comentários <span class="badge">14</span></h3>
                 </div>
                 <div class="panel-body">
                   <div class="list-group list-home">
-                    <a href="#" class="list-group-item"><i class="fa fa-plus-circle"></i> Adicionar
+                    <a href="#" class="list-group-item"><i class="fa fa-check-circle"></i> Aprovar
                     </a>
-                    <a href="#" class="list-group-item"><i class="fa fa-list"></i>  Listar
+                    <a href="#" class="list-group-item"><i class="fa fa-list"></i>  Listar todos
                     </a>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -120,7 +146,7 @@
     <script src="bower_components/tinymce-dist/tinymce.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
+    <script src="bower_components/highcharts/highcharts.js"></script>
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
