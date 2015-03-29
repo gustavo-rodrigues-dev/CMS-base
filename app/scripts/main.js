@@ -50,7 +50,12 @@ var main = (function() {
 		/**
 		*calendars
 		**/
-
+		//calendar-single
+		$('.calendar-single').datepicker({
+			format: 'dd/mm/yyyy',
+    	    language: 'pt-BR',
+    	    orientation: 'top'
+    	});
 		//calendar-range
 		$('.calendar-range').daterangepicker(
            {
@@ -82,6 +87,19 @@ var main = (function() {
                $('#end').val(end.format('YYYY-MM-DD'));
            }
        	);
+
+		//editor
+		tinymce.init({
+		    selector: ".editor",
+		    menubar : false,
+		    language: "pt_BR",
+		    plugins: [
+		        "advlist autolink lists link image charmap print preview anchor",
+		        "searchreplace visualblocks code fullscreen",
+		        "insertdatetime media table contextmenu paste"
+		    ],
+		    toolbar: "undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link"
+		});
 	};
 
 	//ico-calendar
