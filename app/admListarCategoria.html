@@ -28,10 +28,11 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <header class="container">
+      <!--menu -->
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-            <a href="#" class="navbar-brand">Portal - CMS</a>
+            <a href="index.html" class="navbar-brand">Portal - CMS</a>
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -43,40 +44,52 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="categories">Categorias <span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="categories">
-                  <li><a href="#">Inserir</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Listar</a></li>
+                  <li><a href="admAddCategoria.html" class="list-group-item"><i class="fa fa-plus-circle"></i> Adicionar
+                  </a></li>
+                  <li><a href="admListarCategoria.html" class="list-group-item"><i class="fa fa-list"></i> Listar
+                  </a></li>
                 </ul>
               </li>
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="posts">Matérias <span class="caret"></span></a>
                 <ul class="dropdown-menu" aria-labelledby="posts">
-                  <li><a href="#">Inserir</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Listar</a></li>
+                  <li><a href="admAddMateria.html" class="list-group-item"><i class="fa fa-plus-circle"></i> Adicionar
+                  </a></li>
+                  <li><a href="admListaMateria.html" class="list-group-item"><i class="fa fa-list"></i>  Listar
+                  </a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="posts">Comentários <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="posts">
+                  <li><a href="admListarMensagens.html" class="list-group-item"><i class="fa fa-check-circle"></i> Aprovar
+                  </a></li>
+                  <li><a href="admListarMensagens.html" class="list-group-item"><i class="fa fa-list"></i>  Listar todos
+                  </a></li>
                 </ul>
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
+              <li>
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="categories"><i class="fa fa-power-off"></i> Sair</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+      <!--/menu -->
     </header>
     <article class="container">
       <div class="page-header">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12">
             <ol class="breadcrumb">
-              <li><a href="#">CMS</a></li>
+              <li><a href="index.html">CMS</a></li>
               <li class="active">Categorias</li>
             </ol>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12 group-title-list">
-            <h2>Categorias <a href="#" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="right" title="Inserir nova categoria" \><i class="fa fa-plus"></i></a></h2>
+            <h2>Categorias <a href="admAddCategoria.html" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="right" title="Inserir nova categoria" \><i class="fa fa-plus"></i></a></h2>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="panel panel-primary panel-home">
