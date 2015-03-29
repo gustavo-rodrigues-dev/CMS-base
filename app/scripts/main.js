@@ -1,7 +1,9 @@
 var main = (function() {
 	'use strict';
-
 	var init = function(){
+		//tooltip
+		$('[data-toggle="tooltip"]').tooltip();
+		//add chart home
 		$('.chart-access-month').highcharts({
 	        title: {
 	            text: '',
@@ -44,7 +46,56 @@ var main = (function() {
 	            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
 	        }]
 	    });
-	}
+
+		/**
+		*calendars
+		**/
+
+		//calendar-range
+		$('.calendar-range').daterangepicker(
+           {
+               ranges: {
+                   'Hoje': [moment(), moment()],
+                   'Ontem': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                   'Últimos 7 dias': [moment().subtract(6, 'days'), moment()],
+                   'Últimos 30 dias': [moment().subtract(29, 'days'), moment()],
+                   'Nesse mês': [moment().startOf('month'), moment().endOf('month')],
+                   'Mês anterior': [moment().subtract(1,'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+               },
+               opens: 'right',
+               startDate: moment().subtract(29, 'days'),
+               endDate: moment(),
+               format: 'DD/MM/YYYY',
+               locale: {
+                   applyLabel: 'Selecionar',
+                   cancelLabel: 'Cancelar',
+                   fromLabel: 'De',
+                   toLabel: 'Até',
+                   weekLabel: 'W',
+                   customRangeLabel: 'Personalizado',
+                   daysOfWeek: moment.weekdaysMin(),
+                   monthNames: moment.monthsShort(),
+                   firstDay: moment.localeData()._week.dow
+               }
+           },function(start, end) {
+               $('#start').val(start.format('YYYY-MM-DD'));
+               $('#end').val(end.format('YYYY-MM-DD'));
+           }
+       	);
+	};
+
+	//ico-calendar
+	$('.calendar-ico').click(function(ev){
+		ev.preventDefault();
+		var _this = $(this);
+			_this.prev().focus();
+	});
+
+	$('.select').click(function(ev){
+		ev.preventDefault();
+		var _this = $(this);
+			_this.prev().focus();
+	});
 	var main = {
 		init: init
 	};

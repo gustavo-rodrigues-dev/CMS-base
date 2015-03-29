@@ -4,7 +4,8 @@ var pageres = new Pageres({
 		delay: 2,
 		format:'png'
 	})
-    .src('http://localhost:9000/', ['480x320', '1024x768', 'iphone 5s'], {crop: false})
+    .src('http://localhost:9000/', ['360x640','640x360', '800x600' ,'1024x768'], {crop: false})
+    .src('http://localhost:9000/admListaMateria.html', ['360x640','640x360', '800x600' ,'1024x768'], {crop: false})
     .dest('./screenshots/');
 
 

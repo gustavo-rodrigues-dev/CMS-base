@@ -8,6 +8,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 $fa-font-path: "../bower_components/fontawesome/fonts" !default;
 @import "fontawesome/scss/font-awesome.scss";
 
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -28,8 +34,18 @@ body {
   }
   .panel-body{
     padding: 0;
-    .list-home{
+    .list-home, .jumbotron{
       margin-bottom: 0px;
+    }
+    .table-list{
+      th{
+        a{
+          float: right
+        }
+      }
+      .btn-link{
+        padding: 2px 6px;
+      }
     }
   }
 }
@@ -54,9 +70,11 @@ body {
   }
 }
 
+.btn-circle{
+  border-radius: 50%;
+}
 .page-header{
   margin-top: 60px;
-  color: #ff9900;
 }
 
 /* Custom page footer */
@@ -72,11 +90,10 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  text-align: left;
+  padding: 12px 24px !important;
   .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+    padding: 12px 18px;
   }
 }
 

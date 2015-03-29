@@ -1,0 +1,258 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>portal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <header class="container">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a href="#" class="navbar-brand">Portal - CMS</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="categories">Categorias <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="categories">
+                  <li><a href="#">Inserir</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Listar</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="posts">Matérias <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="posts">
+                  <li><a href="#">Inserir</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Listar</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="categories"><i class="fa fa-power-off"></i> Sair</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <article class="container">
+      <div class="page-header">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <ol class="breadcrumb">
+              <li><a href="#">CMS</a></li>
+              <li class="active">Matérias</li>
+            </ol>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 group-title-list">
+            <h2>Matérias <a href="#" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="right" title="Inserir nova matéria" \><i class="fa fa-plus"></i></a></h2>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="panel panel-primary panel-home">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-filter"></i>&nbsp; Filtrar  <span class="badge"><i class="fa fa-arrow-up"></i></span></h3>
+              </div>
+              <div class="panel-body">
+                <div class="jumbotron">
+                  <form class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 form-group">
+                      <label for="exampleInputEmail1">Título</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Título">
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 form-group">
+                    <label for="exampleInputPassword1">Data</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control calendar calendar-range" id="exampleInputPassword1" placeholder="dd/mm/yyyy a dd/mm/yyyy">
+                        <span class="input-group-addon calendar-ico"><i class="fa fa-calendar"></i></span>
+                      </div>
+
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 form-group">
+                      <label for="exampleInputPassword1">Categoria</label>
+                      <div class="input-group">
+                        <select class="form-control">
+                          <option>Selecione</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        <span class="input-group-addon select"><i class="fa fa-angle-down"></i></span>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 form-group">
+                      <label>
+                        <input type="checkbox"> <i>Incluir resultados que estão na lixeira?</i>
+                      </label>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 form-group">
+                      <button type="submit" class="btn btn-info"><i class="fa fa-search"></i> Buscar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="panel panel-default panel-home">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-list"></i>&nbsp; Lista de Matérias <span class="badge">14</span></h3>
+              </div>
+              <div class="panel-body">
+                <table class="table table-bordered table-hover table-list">
+                  <thead>
+                    <tr>
+                      <th>id <a href="#"><i class="fa fa-arrows-v"></i></a></th>
+                      <th>Título <a href="#"><i class="fa fa-arrows-v"></i></a></th>
+                      <th>Categoria <a href="#"><i class="fa fa-arrows-v"></i></a></th>
+                      <th>Data de cadastro <a href="#"><i class="fa fa-arrows-v"></i></a></th>
+                      <th>Ações <a href="#"><i class="fa fa-arrows-v"></i></a></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td>Games</td>
+                      <td>23/03/205</td>
+                      <td class="actions">
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="fa fa-eye"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil-square-o"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Excluir"><i class="fa fa-trash"></i></a> 
+                      </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td>Games</td>
+                      <td>23/03/205</td>
+                      <td class="actions">
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="fa fa-eye"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil-square-o"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Excluir"><i class="fa fa-trash"></i></a> 
+                      </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td>Games</td>
+                      <td>23/03/205</td>
+                      <td class="actions">
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="fa fa-eye"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil-square-o"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Excluir"><i class="fa fa-trash"></i></a> 
+                      </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td>Games</td>
+                      <td>23/03/205</td>
+                      <td class="actions">
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="fa fa-eye"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil-square-o"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Excluir"><i class="fa fa-trash"></i></a> 
+                      </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td>Games</td>
+                      <td>23/03/205</td>
+                      <td class="actions">
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="fa fa-eye"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil-square-o"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Excluir"><i class="fa fa-trash"></i></a> 
+                      </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td>Games</td>
+                      <td>23/03/205</td>
+                      <td class="actions">
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Visualizar"><i class="fa fa-eye"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil-square-o"></i></a> 
+                        <a href="#" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Excluir"><i class="fa fa-trash"></i></a> 
+                      </td>
+                    </tr>
+                    <tr>
+                  </tbody>
+                </table>
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                  <ul class="pagination">
+                    <li class="disabled"><a href="#">«</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <footer>
+      
+    </footer>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/mustache.js/mustache.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/moment/locale/pt-br.js"></script>
+    <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="bower_components/tinymce-dist/tinymce.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script src="bower_components/highcharts/highcharts.js"></script>
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
