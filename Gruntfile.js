@@ -194,12 +194,20 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         ignorePath: /^\/|\.\.\//,
-        src: ['<%= config.app %>/index.html'],
-        exclude: ['bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js']
+        src: ['<%= config.app %>/*.html'],
+        exclude: [
+        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
+        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
+        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js',
+        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
+        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
+        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
+        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
+        'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js'
+        ]
       },
       sass: {
-        src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        ignorePath: /(\.\.\/){1,2}bower_components\//
+        src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}']
       }
     },
 
@@ -432,8 +440,7 @@ module.exports = function (grunt) {
     'copy:dist',
     'modernizr',
     'rev',
-    'usemin',
-    'htmlmin'
+    'usemin'
   ]);
 
   grunt.registerTask('default', [
